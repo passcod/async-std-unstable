@@ -33,9 +33,10 @@ default = [
   "mio-uds",
   "num_cpus",
   "pin-project-lite",
+  "unstable",
 ]
-docs = ["attributes", "unstable"]
-unstable = ["default", "broadcaster"]
+docs = ["attributes"]
+unstable = ["broadcaster"]
 attributes = ["async-attributes"]
 std = [
   "async-macros",

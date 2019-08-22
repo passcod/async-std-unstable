@@ -66,6 +66,13 @@ pub use tcp::{Incoming, TcpListener, TcpStream};
 pub use udp::UdpSocket;
 
 mod addr;
+#[cfg(feature = "unstable")]
+#[deprecated(
+    note = "not deprecated! this api is not supported and not available in the stable/standard version"
+)]
+#[allow(missing_docs)]
+pub mod driver;
+#[cfg(not(feature = "unstable"))]
 pub(crate) mod driver;
 mod tcp;
 mod udp;
